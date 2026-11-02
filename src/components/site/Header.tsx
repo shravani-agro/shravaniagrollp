@@ -65,7 +65,7 @@ export function Header() {
         className={`sticky top-0 z-40 transition-all ${scrolled ? "glass-header" : "bg-background border-b border-transparent"
           }`}
       >
-        <div className="container-x flex items-center gap-6 py-3.5">
+        <div className="container-x flex items-center gap-2.5 sm:gap-6 py-3 sm:py-3.5">
           <button
             className="lg:hidden -ml-1 grid h-9 w-9 place-items-center rounded-md text-ink hover:bg-surface"
             onClick={() => setMobileOpen(true)}

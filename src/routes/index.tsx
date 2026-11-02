@@ -33,7 +33,7 @@ function Home() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-8 lg:row-span-2 relative overflow-hidden rounded-3xl bg-ink text-background dark:bg-[oklch(0.16_0.015_90)] dark:text-[oklch(0.976_0.012_90)] min-h-[520px] lg:min-h-[640px]"
+            className="lg:col-span-8 lg:row-span-2 relative overflow-hidden rounded-3xl bg-ink text-background dark:bg-[oklch(0.16_0.015_90)] dark:text-[oklch(0.976_0.012_90)] min-h-[460px] sm:min-h-[520px] lg:min-h-[640px]"
           >
             <img
               src={heroFields}
@@ -49,7 +49,7 @@ function Home() {
                 Kharif 2026 · now shipping
               </div>
               <div className="max-w-2xl">
-                <h1 className="text-display text-[2.4rem] sm:text-5xl lg:text-[4rem] leading-[0.98] text-[oklch(0.976_0.012_90)]">
+                <h1 className="text-display text-[2rem] sm:text-5xl lg:text-[4rem] leading-[1.04] sm:leading-[0.98] text-[oklch(0.976_0.012_90)]">
                   Every input the season asks for,{" "}
                   <span className="text-accent">on one shelf.</span>
                 </h1>
@@ -139,9 +139,9 @@ function Home() {
           </div>
           <Link
             to="/products"
-            className="hidden sm:inline text-sm font-medium text-primary hover:underline"
+            className="text-sm font-medium text-primary hover:underline"
           >
-            Browse all categories →
+            Browse all →
           </Link>
         </div>
 
@@ -270,8 +270,8 @@ function Home() {
             See all →
           </Link>
         </div>
-        <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {products.slice(0, 4).map((p) => (
+        <div className="grid gap-3 sm:gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
+          {products.map((p) => (
             <ProductCard key={p.slug} product={p} />
           ))}
         </div>
@@ -291,7 +291,7 @@ function Home() {
                 schemes — written and reviewed by working agronomists.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-3 mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6 sm:mt-8">
               {[
                 { t: "Cotton — Kharif 2026 playbook", k: "Crop Guide", slug: "cotton-kharif-2026" },
                 { t: "Diagnosing yellow-leaf mosaic in chilli", k: "Pest & Disease", slug: "yellow-leaf-mosaic-chilli" },

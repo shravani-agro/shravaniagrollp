@@ -206,7 +206,7 @@ function PDP() {
           </div>
 
           {/* Trust row */}
-          <div className="mt-8 grid grid-cols-3 gap-3">
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3">
             {[
               { i: Truck, t: "Ships in 24–48h", s: "Pan-India logistics" },
               { i: ShieldCheck, t: "Genuine product", s: "Batch traceability" },
