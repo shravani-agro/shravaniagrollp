@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Leaf, Award, MapPin, Users } from "lucide-react";
 import { motion } from "motion/react";
+import { Mark } from "@/components/site/Logo";
 
 export const Route = createFileRoute("/about")({
   component: About,
@@ -10,10 +11,11 @@ function About() {
   return (
     <div className="pb-24">
       {/* Hero */}
-      <section className="bg-ink text-background dark:bg-[oklch(0.16_0.015_90)] dark:text-[oklch(0.976_0.012_90)] pt-24 pb-32 px-4 relative overflow-hidden">
+      <section className="bg-ink text-background dark:bg-[oklch(0.16_0.015_90)] dark:text-[oklch(0.976_0.012_90)] pt-20 pb-32 px-4 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary via-ink to-ink dark:from-primary dark:via-[oklch(0.16_0.015_90)] dark:to-[oklch(0.16_0.015_90)]"></div>
         <div className="container-x relative max-w-4xl text-center">
-          <div className="text-eyebrow text-accent mb-6">Our Story</div>
+          <Mark size={76} className="mx-auto mb-6 bg-white/15 p-2 rounded-full backdrop-blur-sm shadow-lift" />
+          <div className="text-eyebrow text-accent mb-4">Our Story</div>
           <h1 className="text-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-[oklch(0.976_0.012_90)] dark:text-[oklch(0.976_0.012_90)]">
             Rooted in heritage.
             <br />
