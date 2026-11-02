@@ -6,7 +6,6 @@ import {
   ShieldCheck,
   RotateCcw,
   MessageCircle,
-  Heart,
   Minus,
   Plus,
   Check,
@@ -194,12 +193,7 @@ function PDP() {
             >
               Add to cart · {formatINR(product.price * qty)}
             </button>
-            <button
-              aria-label="Save"
-              className="grid h-12 w-12 place-items-center rounded-full border border-border hover:text-clay"
-            >
-              <Heart className="h-5 w-5" />
-            </button>
+
           </div>
 
           <div className="mt-3 flex flex-wrap gap-2">

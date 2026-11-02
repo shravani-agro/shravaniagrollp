@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Heart, ShoppingCart, Trash2 } from "lucide-react";
+import { Bookmark, ShoppingCart, Trash2 } from "lucide-react";
 import { useCart } from "@/lib/cart-store";
 import { products, formatINR } from "@/lib/catalog";
 import { Button } from "@/components/ui/button";
@@ -18,17 +18,17 @@ function Wishlist() {
     <div className="container-x py-8 lg:py-12">
       <div className="max-w-5xl mx-auto">
         <div className="flex items-center gap-3 mb-8">
-          <Heart className="h-7 w-7 text-primary" />
+          <Bookmark className="h-7 w-7 text-primary" />
           <h1 className="text-display text-3xl text-ink">My Wishlist</h1>
           <span className="text-ink-soft text-sm">({wishlistItems.length} items)</span>
         </div>
 
         {wishlistItems.length === 0 ? (
           <div className="surface-card p-16 text-center">
-            <Heart className="h-12 w-12 text-ink-soft mx-auto mb-4 opacity-30" />
+            <Bookmark className="h-12 w-12 text-ink-soft mx-auto mb-4 opacity-30" />
             <h2 className="text-display text-xl text-ink">Your wishlist is empty</h2>
             <p className="text-ink-soft mt-2">
-              Save products you love so you can find them easily later.
+              Save products to easily find and order them later.
             </p>
             <Link to="/products" className="mt-6 inline-block">
               <Button>Start Shopping</Button>

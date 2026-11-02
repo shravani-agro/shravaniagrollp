@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Search, ShoppingBag, Heart, User, Menu, X, ChevronDown, ArrowRight } from "lucide-react";
+import { Search, ShoppingBag, User, Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import { Logo } from "./Logo";
 import { ThemeToggle } from "./ThemeToggle";
 import { useCart } from "@/lib/cart-store";
@@ -121,13 +121,7 @@ export function Header() {
             >
               <User className="h-4 w-4" />
             </Link>
-            <Link
-              to="/auth/wishlist"
-              aria-label="Wishlist"
-              className="hidden sm:grid h-9 w-9 place-items-center rounded-full border border-border text-ink-soft hover:text-ink hover:bg-surface"
-            >
-              <Heart className="h-4 w-4" />
-            </Link>
+
             <button
               onClick={cart.open}
               aria-label={`Cart (${cart.count} items)`}

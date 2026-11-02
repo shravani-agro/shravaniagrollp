@@ -1,7 +1,7 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useUserStore } from "@/lib/user-store";
 import { Button } from "@/components/ui/button";
-import { LayoutDashboard, ShoppingBag, Heart, User, Package, Users, Truck, Warehouse, BarChart3, Megaphone, HeadphonesIcon, FileText, IndianRupee, LogOut, Sprout, Store } from "lucide-react";
+import { LayoutDashboard, ShoppingBag, Bookmark, User, Package, Users, Truck, Warehouse, BarChart3, Megaphone, HeadphonesIcon, FileText, IndianRupee, LogOut, Sprout, Store } from "lucide-react";
 
 export const Route = createFileRoute("/_auth/dashboard")({
   component: Dashboard,
@@ -23,7 +23,7 @@ function Dashboard() {
       links: [
         { label: "Dashboard", icon: LayoutDashboard, path: "/dashboard" as const },
         { label: "My Orders", icon: ShoppingBag, path: "/orders" as const },
-        { label: "My Wishlist", icon: Heart, path: "/wishlist" as const },
+        { label: "My Wishlist", icon: Bookmark, path: "/wishlist" as const },
         { label: "My Profile", icon: User, path: "/profile" as const },
       ],
     },

@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Heart, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import { formatINR, type Product } from "@/lib/catalog";
 import { useCart } from "@/lib/cart-store";
 
@@ -30,13 +30,7 @@ export function ProductCard({ product }: { product: Product }) {
             {off}% off
           </span>
         )}
-        <button
-          aria-label="Save"
-          className="absolute bottom-3 right-3 grid h-9 w-9 place-items-center rounded-full bg-background/90 border border-border opacity-0 group-hover:opacity-100 transition-opacity hover:text-clay"
-          onClick={(e) => e.preventDefault()}
-        >
-          <Heart className="h-4 w-4" />
-        </button>
+
       </Link>
 
       <div className="p-4 flex flex-col flex-1">
