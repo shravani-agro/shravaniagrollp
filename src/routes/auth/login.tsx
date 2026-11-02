@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Clock, AlertTriangle } from "lucide-react";
+import { Mark } from "@/components/site/Logo";
 
 export const Route = createFileRoute("/auth/login")({
   component: Login,
@@ -39,11 +40,14 @@ function Login() {
 
   return (
     <div className="space-y-6">
-      <div className="text-center">
-        <h2 className="mt-6 text-display text-3xl font-bold tracking-tight text-ink">
+      <div className="text-center flex flex-col items-center">
+        <Link to="/" className="inline-block hover:opacity-90 transition-opacity">
+          <Mark size={60} className="mx-auto" />
+        </Link>
+        <h2 className="mt-3 text-display text-2xl sm:text-3xl font-bold tracking-tight text-ink">
           Welcome back
         </h2>
-        <p className="mt-2 text-sm text-ink-soft">Sign in to your account</p>
+        <p className="mt-1.5 text-sm text-ink-soft">Sign in to your Shravani Agro account</p>
       </div>
 
       <form className="mt-8 space-y-6" onSubmit={handleLogin}>

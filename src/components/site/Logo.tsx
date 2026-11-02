@@ -1,65 +1,65 @@
 import { Link } from "@tanstack/react-router";
+import logoImg from "@/assets/logo.png";
+import logoWithTextImg from "@/assets/logowithtext.png";
 
-export function Mark({ className = "", size = 32 }: { className?: string; size?: number }) {
+export function Mark({ className = "", size = 36 }: { className?: string; size?: number }) {
   return (
-    <svg viewBox="0 0 48 48" width={size} height={size} className={className} aria-hidden="true">
-      {/* geometric sprout / furrow — original mark */}
-      <defs>
-        <linearGradient id="sa-mark" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="currentColor" stopOpacity="0.9" />
-          <stop offset="1" stopColor="currentColor" stopOpacity="1" />
-        </linearGradient>
-      </defs>
-      <path
-        d="M24 4 C24 20 12 22 12 34 C12 41 17 45 24 45 C31 45 36 41 36 34 C36 22 24 20 24 4 Z"
-        fill="url(#sa-mark)"
-      />
-      <path
-        d="M24 14 L24 45"
-        stroke="var(--color-background)"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        opacity="0.55"
-      />
-      <path
-        d="M24 22 C20 22 17 24 16 28"
-        stroke="var(--color-background)"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        fill="none"
-        opacity="0.55"
-      />
-      <path
-        d="M24 26 C28 26 31 28 32 32"
-        stroke="var(--color-background)"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        fill="none"
-        opacity="0.55"
-      />
-    </svg>
+    <img
+      src={logoImg}
+      alt="Shravani Agro Emblem"
+      width={size}
+      height={size}
+      style={{ width: `${size}px`, height: `${size}px` }}
+      className={`rounded-full object-contain shrink-0 drop-shadow-sm ${className}`}
+    />
   );
 }
 
-export function Logo({ compact = false }: { compact?: boolean }) {
+export function Logo({
+  compact = false,
+  showText = true,
+  className = "",
+}: {
+  compact?: boolean;
+  showText?: boolean;
+  className?: string;
+}) {
   return (
     <Link
       to="/"
-      className="flex items-center gap-2 sm:gap-2.5 text-primary min-w-0"
-      aria-label="Shravani Agroproducts Enterprises LLP home"
+      className={`flex items-center gap-2.5 text-primary min-w-0 group ${className}`}
+      aria-label="Shravani Agro Product Enterprises home"
     >
-      <Mark size={compact ? 26 : 32} className="shrink-0" />
-      <span className="flex flex-col leading-none min-w-0">
-        <span className="text-display text-[0.92rem] sm:text-[1.05rem] font-semibold text-ink truncate">
-          <span className="hidden sm:inline">Shravani Agroproducts Enterprises LLP</span>
-          <span className="sm:hidden">Shravani Agro</span>
-        </span>
-        {!compact && (
-          <span className="text-[0.56rem] sm:text-[0.62rem] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-ink-soft mt-0.5">
-            Agroproducts LLP
+      <Mark size={compact ? 32 : 40} />
+      {showText && (
+        <span className="flex flex-col leading-none min-w-0">
+          <span className="text-display text-[1.05rem] sm:text-[1.2rem] font-bold tracking-tight text-ink group-hover:text-primary transition-colors">
+            SHRAVANI
           </span>
-        )}
-      </span>
+          <span className="text-[0.54rem] sm:text-[0.62rem] uppercase tracking-[0.15em] sm:tracking-[0.18em] font-semibold text-amber dark:text-amber mt-0.5 whitespace-nowrap">
+            Agro Product Enterprises
+          </span>
+        </span>
+      )}
+    </Link>
+  );
+}
+
+export function FullBrandLogo({
+  className = "",
+  maxWidth = 260,
+}: {
+  className?: string;
+  maxWidth?: number;
+}) {
+  return (
+    <Link to="/" aria-label="Shravani Agro Product Enterprises home" className={`inline-block ${className}`}>
+      <img
+        src={logoWithTextImg}
+        alt="Shravani Agro Product Enterprises"
+        style={{ maxWidth: `${maxWidth}px` }}
+        className="w-full h-auto object-contain"
+      />
     </Link>
   );
 }

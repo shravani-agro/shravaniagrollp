@@ -56,14 +56,14 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.2fr_2.5fr_1.2fr]">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2.5 text-primary">
-              <Mark size={36} />
+            <div className="flex items-center gap-3">
+              <Mark size={44} />
               <div>
-                <div className="text-display text-lg font-semibold text-ink leading-none">
-                  Shravani Agroproducts Enterprises LLP
+                <div className="text-display text-xl font-bold text-ink tracking-tight leading-none">
+                  SHRAVANI
                 </div>
-                <div className="text-[0.62rem] uppercase tracking-[0.22em] text-ink-soft mt-1">
-                  Agroproducts LLP
+                <div className="text-[0.62rem] uppercase tracking-[0.16em] font-semibold text-amber mt-1">
+                  Agro Product Enterprises
                 </div>
               </div>
             </div>

@@ -35,13 +35,17 @@ function Wishlist() {
             </Link>
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {wishlistItems.map((p) => (
               <div key={p.slug} className="surface-card overflow-hidden group">
                 <div className="relative aspect-square bg-surface overflow-hidden">
-                  <div className="h-full w-full flex items-center justify-center text-primary/30 text-4xl font-bold group-hover:scale-105 transition-transform duration-500">
-                    {p.name[0]}
-                  </div>
+                  {p.image ? (
+                    <img src={p.image} alt={p.name} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                  ) : (
+                    <div className="h-full w-full flex items-center justify-center text-primary/30 text-4xl font-bold group-hover:scale-105 transition-transform duration-500">
+                      {p.name[0]}
+                    </div>
+                  )}
                   <button className="absolute top-3 right-3 h-8 w-8 rounded-full bg-background/80 backdrop-blur-sm grid place-items-center text-destructive hover:bg-background transition-colors">
                     <Trash2 className="h-4 w-4" />
                   </button>
