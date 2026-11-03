@@ -159,22 +159,24 @@ export function Header() {
                       </div>
                     </Link>
                   ))}
-                  <div className="col-span-4 grid grid-cols-4 gap-8 pt-6 border-t border-border">
-                    {categories.slice(4).map((c) => (
-                      <Link
-                        key={c.slug}
-                        to="/products"
-                        search={{ category: c.slug }}
-                        onClick={() => setOpenMenu(null)}
-                        className="group"
-                      >
-                        <div className="text-eyebrow mb-2 group-hover:text-primary transition-colors">
-                          {c.name}
-                        </div>
-                        <p className="text-sm text-ink-soft leading-relaxed">{c.tagline}</p>
-                      </Link>
-                    ))}
-                  </div>
+                  {categories.slice(4).length > 0 && (
+                    <div className="col-span-4 grid grid-cols-4 gap-8 pt-6 border-t border-border">
+                      {categories.slice(4).map((c) => (
+                        <Link
+                          key={c.slug}
+                          to="/products"
+                          search={{ category: c.slug }}
+                          onClick={() => setOpenMenu(null)}
+                          className="group"
+                        >
+                          <div className="text-eyebrow mb-2 group-hover:text-primary transition-colors">
+                            {c.name}
+                          </div>
+                          <p className="text-sm text-ink-soft leading-relaxed">{c.tagline}</p>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                   <div className="col-span-4 flex items-center justify-between pt-6 border-t border-border mt-2">
                     <p className="text-xs text-ink-soft">
                       Looking for the complete agricultural input hierarchy and taxonomy?
