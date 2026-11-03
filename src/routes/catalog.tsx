@@ -25,7 +25,7 @@ import { motion, AnimatePresence } from "motion/react";
 export const Route = createFileRoute("/catalog")({
   head: () => ({
     meta: [
-      { title: "Agricultural Catalog Hierarchy — Shravani Agroproducts Enterprises LLP" },
+      { title: "Agricultural Catalog Hierarchy â€” Shravani Agroproducts Enterprises LLP" },
       {
         name: "description",
         content:
@@ -159,9 +159,7 @@ function CatalogExplorer() {
             Explore inputs & inputs hierarchy
           </h1>
           <p className="mt-2 text-sm text-ink-soft max-w-xl">
-            Browse our original, comprehensive classification system. Search or filter through 13
-            high-level categories of seeds, crop protection, fertilizers, plant nutrition, tools,
-            and services.
+            Browse our comprehensive classification system. Search or filter through our catalog categories of seeds, crop protection, fertilizers, and farm machinery.
           </p>
         </div>
       </div>

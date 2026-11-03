@@ -296,7 +296,7 @@ export function Header() {
               >
                 <div>
                   <div className="font-semibold text-sm">Catalog Explorer</div>
-                  <div className="text-xs opacity-80 mt-0.5">Explore 13-category hierarchy</div>
+                  <div className="text-xs opacity-80 mt-0.5">Explore catalog hierarchy</div>
                 </div>
                 <ArrowRight className="h-4 w-4" />
               </Link>
